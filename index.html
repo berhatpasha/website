@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berat Bayraktar</title>
+    <!-- Google Fonts bağlantısı -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif; /* Genel font */
+            background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url('background.png') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 10px;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            border-bottom: 2px solid #444;
+        }
+        header img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+        }
+        h1 {
+            font-family: 'Open Sans', sans-serif; /* Başlık fontu */
+            font-size: 2.5em;
+            margin: 10px 0;
+        }
+        h2 {
+            font-family: 'Open Sans', sans-serif; /* Başlık fontu */
+            font-size: 1.8em;
+            margin-top: 20px;
+        }
+        h4 {
+            font-family: 'Open Sans', sans-serif; /* Başlık fontu */
+        }
+        .content {
+            margin-top: 20px;
+        }
+        .slider {
+            position: relative;
+            max-width: 100%;
+            margin: 20px 0;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            width: 100%;
+        }
+        .slide {
+            flex: 1 0 100%;
+            box-sizing: border-box;
+        }
+        .slide img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .post {
+            margin-bottom: 20px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+        }
+        .post h2 {
+            color: #4CAF50;
+        }
+        .post p {
+            font-size: 1em;
+            line-height: 1.6;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            border-top: 2px solid #444;
+            margin-top: 20px;
+        }
+        a {
+            color: #78B7D0;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="profile.png" alt="Profile Picture">
+            <h1>Berat Bayraktar ⚙️</h1>
+        </header>
+        
+        <div class="content">
+
+
+            <div class="slider">
+                <div class="slides">
+                    <div class="slide"><img src="slider1.png" alt="Slider Image 1"></div>
+                    <div class="slide"><img src="slider2.png" alt="Slider Image 2"></div>
+                    <div class="slide"><img src="slider3.png" alt="Slider Image 3"></div>
+                    <!-- Daha fazla resim ekleyebilirsiniz -->
+                </div>
+            </div>
+
+
+            <div class="post">
+                <h2>Who is Berat Bayraktar 🎵</h2>
+                <h3>Short Bio ☕</h3>
+                <p>Born on 4 February 2010 in Turkey, he attended primary school at <a href="https://hendeknokselio.meb.k12.tr/">noksel primary school</a>. He graduated from <a href="https://sehitmahmutbey.meb.k12.tr/">Şehit mahmutbey secondary school</a> and started studying at <a href="https://774025.meb.k12.tr/tema/siteharitasi.php">Devlet Bahçeli Science High School</a> in 2024. 🚀</p>
+                <p>Especially dealing with software in python language and a linux enthusiast! 🐧 And ı support open source, free software ❤️</p>
+                <h4>Supported projects 📚</h4>
+                <p>Their own projects are available on their <a href="https://github.com/berhatpasha">github page</a> 🏷️ He is currently working for <a href="https://teknofest.org">Teknofest</a> 🔥</p>
+            </div>
+            <div class="post">
+                <h3>Contact</h3>
+                <p>I am usually available outside of school hours, you can reach me from <a href="https://discord.com/">@ppasnam</a> account and You can also reach my <a href="gmail.com" title="sakaryaliberatbey@proton.me">personal e-mail address</a> </p>
+            </div>
+            <!-- Daha fazla yazı ekleyebilirsiniz -->
+        </div>
+        
+        <footer>
+            <p>&copy; 2024 Berat Bayraktar. This site and its content is free software and is free to copy and modify. Everyone can benefit from it.</p>
+        </footer>
+    </div>
+
+    <script>
+        let currentIndex = 0;
+        const slides = document.querySelector('.slides');
+        const totalSlides = document.querySelectorAll('.slide').length;
+
+        function showNextSlide() {
+            currentIndex = (currentIndex + 1) % totalSlides;
+            const offset = -currentIndex * 100;
+            slides.style.transform = `translateX(${offset}%)`;
+        }
+
+        setInterval(showNextSlide, 5000); // Her 5 saniyede bir resim değişir
+    </script>
+</body>
+</html>
